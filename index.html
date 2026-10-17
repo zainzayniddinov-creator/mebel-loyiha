@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mebel3D — Oshxona konstruktori</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">MEBEL<span>3D</span></div>
+    <div class="project-name">Oshxona konstruktori</div>
+    <button id="resetBtn" class="reset-btn">Qayta boshlash</button>
+  </header>
+
+  <main class="workspace">
+    <aside class="sidebar">
+      <h2>Loyiha sozlamalari</h2>
+      <p class="muted">Oshxona o‘lchamlari</p>
+
+      <label for="width">Eni (mm)</label>
+      <input id="width" type="number" value="3000" min="1000" max="10000">
+
+      <label for="height">Balandligi (mm)</label>
+      <input id="height" type="number" value="2400" min="1000" max="4000">
+
+      <h3>Mebel qo‘shish</h3>
+      <button id="addCabinet" class="primary-btn">
+        + Pastki shkaf qo‘shish
+      </button>
+
+      <label for="cabinetColor">Shkaf rangi</label>
+      <input id="cabinetColor" type="color" value="#c69c72">
+
+      <div class="help">
+        <strong>Boshqaruv</strong>
+        <p>Sichqoncha bilan 3D sahnani aylantiring.</p>
+        <p>Keyingi bosqichda shkaflarni boshqarishni qo‘shamiz.</p>
+      </div>
+    </aside>
+
+    <section class="viewport">
+      <div class="viewport-title">3D KO‘RINISH</div>
+      <div id="scene"></div>
+      <div class="status" id="status">3D sahna yuklanmoqda...</div>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
